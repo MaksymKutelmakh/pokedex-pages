@@ -1,0 +1,18 @@
+<div class="card text-center m-3">
+    <h3 class="card-header">Pokedex</h3>
+    <div class="container-fluid">
+        <div class="pokemon-list">
+            <div class="list">
+                <div class="card-block" (click)="$event.stopPropagation(); selectSinglePokemon(pokemon)" 
+                    *ngFor="let pokemon of pokemonList">
+                   <app-pokemon-card style="width: 100%;" [pokemon]="pokemon"></app-pokemon-card>
+                </div>
+            </div>    
+            <button class="btn btn-primary" (click)="loadNewPage()" style="width: 100%">Load More</button>
+        </div>
+        <div class="pokemon-details">
+            <app-pokemon-details *ngIf="singlePokemonDetails" [pokemon]="singlePokemonDetails"></app-pokemon-details>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,27 @@
+.container-fluid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .pokemon-list {
+        width: 60%;
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            .card-block {
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                width: 32%;
+                min-width: 250px;
+                height: 200px;
+                border: 1px solid black;
+                margin: 5px;
+            }
+        }
+    }
+    .pokemon-details {
+        width: 40%;
+        min-width: 400px;
+    }
+}
+

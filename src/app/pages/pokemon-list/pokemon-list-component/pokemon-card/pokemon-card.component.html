@@ -1,0 +1,11 @@
+<div class="pokemon-info">
+    <img *ngIf="details" src="{{details.sprites.front_default}}" alt="" srcset="">
+    <div class="pokemon-name">
+        {{_pokemon.name}}
+    </div>
+    <div class="pokemon-types" *ngIf="details">
+        <div class="type" [ngStyle]="{'background-color': type.type.color}" *ngFor="let type of details.types">
+            {{type.type.name}}
+        </div>
+    </div>
+</div>

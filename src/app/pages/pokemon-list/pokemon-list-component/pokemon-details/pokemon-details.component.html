@@ -1,0 +1,21 @@
+<div class="pokemon-info">
+    <div class="container-fluid" *ngIf="details">
+        <img  src="{{details.sprites.front_default}}" alt="" srcset="">
+        <div class="pokemon-name">
+            {{_pokemon.name}}
+        </div>
+        <div class="details-info">
+            <span class="details-name">
+                Type
+            </span>
+            <span class="details-value" style="text-transform: capitalize;">{{details.types[0].type.name}}</span>
+        </div>
+        <div class="details-info" *ngFor="let stat of details.stats">
+            <span class="details-name" 
+                [ngStyle]="{'text-transform': stat.stat.name !== 'hp' ? 'capitalize' : 'uppercase'}">
+                {{stat.stat.name}}
+            </span>
+            <span class="details-value">{{stat.base_stat}}</span>
+        </div>
+    </div>
+</div>
